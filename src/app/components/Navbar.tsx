@@ -41,32 +41,31 @@ export function Navbar() {
         scrolled ? "shadow-[0_18px_60px_rgba(0,0,0,0.28)]" : ""
       }`}
       style={{
-        background: scrolled ? "rgba(6,18,15,0.92)" : "transparent",
+        background: scrolled ? "rgba(6,18,15,0.94)" : "transparent",
         backdropFilter: scrolled ? "blur(22px)" : "none",
         borderBottom: scrolled ? "1px solid rgba(255,255,255,0.08)" : "none",
       }}
     >
-      {!scrolled && (
-        <div
-          className="hidden items-center justify-center gap-3 border-b border-white/10 px-6 py-2 text-xs md:flex"
-          style={{
-            background:
-              "linear-gradient(90deg, #A65E12 0%, #C8781A 50%, #A65E12 100%)",
-            fontFamily: F,
-          }}
-        >
-          <Truck size={13} className="shrink-0 text-white" />
-          <span className="font-bold tracking-[0.16em] text-white">
-            ENTREGA EM LAGOA DA CANOA E REGIÃO
-          </span>
-          <ShieldCheck size={13} className="shrink-0 text-white" />
-          <span className="font-semibold tracking-wide text-white/90">
-            atendimento direto pelo WhatsApp
-          </span>
-        </div>
-      )}
+      {/* Faixa fixa desktop */}
+      <div
+        className="hidden items-center justify-center gap-3 border-b border-white/10 px-6 py-2 text-xs md:flex"
+        style={{
+          background:
+            "linear-gradient(90deg, #A65E12 0%, #C8781A 50%, #A65E12 100%)",
+          fontFamily: F,
+        }}
+      >
+        <Truck size={13} className="shrink-0 text-white" />
+        <span className="font-bold tracking-[0.16em] text-white">
+          ENTREGA EM LAGOA DA CANOA E REGIÃO
+        </span>
+        <ShieldCheck size={13} className="shrink-0 text-white" />
+        <span className="font-semibold tracking-wide text-white/90">
+          atendimento direto pelo WhatsApp
+        </span>
+      </div>
 
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 sm:px-6 md:h-[72px]">
+      <div className="mx-auto flex h-[70px] max-w-7xl items-center justify-between px-5 sm:px-6 md:h-[72px]">
         <a
           href="#"
           onClick={() => setOpen(false)}
@@ -74,7 +73,7 @@ export function Navbar() {
           aria-label="Ir para o início"
         >
           <div
-            className="relative flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-2xl shadow-[0_12px_32px_rgba(200,120,26,0.28)] transition-transform duration-300 group-hover:scale-105"
+            className="relative flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-2xl shadow-[0_12px_32px_rgba(200,120,26,0.28)] transition-transform duration-300 group-hover:scale-105 md:h-11 md:w-11"
             style={{
               background: "linear-gradient(135deg, #D18424 0%, #A65E12 100%)",
             }}
@@ -82,22 +81,24 @@ export function Navbar() {
             <div className="absolute inset-0 bg-white/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
             <span
               style={{ fontFamily: FR }}
-              className="relative text-sm font-black italic text-white"
+              className="relative text-sm font-black italic text-white md:text-[15px]"
             >
               LM
             </span>
           </div>
 
-          <div className="flex flex-col justify-center">
+          {/* LOGO TEXT AJUSTADO */}
+          <div className="flex h-10 flex-col justify-center md:h-11">
             <p
               style={{ fontFamily: FR }}
-              className="text-[1.02rem] font-black leading-[1.02] tracking-[-0.02em] text-white"
+              className="m-0 text-[1rem] font-black leading-[1.05] tracking-[-0.02em] text-white md:text-[1.08rem]"
             >
               Lima Móveis
             </p>
+
             <p
               style={{ fontFamily: F }}
-              className="mt-[2px] text-[11px] font-bold uppercase leading-none tracking-[0.16em] text-[#E6A255]"
+              className="m-0 mt-[5px] text-[10px] font-bold uppercase leading-[1] tracking-[0.18em] text-[#E6A255] md:text-[10.5px] md:tracking-[0.2em]"
             >
               &amp; Eletros
             </p>
@@ -157,7 +158,7 @@ export function Navbar() {
 
       {open && (
         <div
-          className="fixed inset-x-0 top-16 z-50 border-t border-white/10 px-5 pb-7 pt-5 shadow-[0_28px_70px_rgba(0,0,0,0.42)] md:hidden"
+          className="fixed inset-x-0 top-[70px] z-50 border-t border-white/10 px-5 pb-7 pt-5 shadow-[0_28px_70px_rgba(0,0,0,0.42)] md:hidden"
           style={{
             background: "rgba(6,18,15,0.98)",
             backdropFilter: "blur(24px)",
