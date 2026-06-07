@@ -1,0 +1,109 @@
+/* Lima Móveis & Eletros — Bold Warm Theme */
+
+:root {
+  --font-size: 16px;
+
+  /* Brand palette */
+  --forest-deep:  #071410;
+  --forest-dark:  #0B1F14;
+  --forest-mid:   #163825;
+  --forest-muted: #2D6A4F;
+  --amber:        #C8781A;
+  --amber-light:  #E09848;
+  --amber-pale:   #F5DDB8;
+  --cream:        #FAF7F0;
+  --cream-dark:   #F2EDE3;
+  --ink:          #1A140A;
+
+  /* Shadcn tokens */
+  --background:            #FAF7F0;
+  --foreground:            #1A140A;
+  --card:                  #FFFFFF;
+  --card-foreground:       #1A140A;
+  --popover:               #FFFFFF;
+  --popover-foreground:    #1A140A;
+  --primary:               #C8781A;
+  --primary-foreground:    #FFFFFF;
+  --secondary:             #F2EDE3;
+  --secondary-foreground:  #1A140A;
+  --muted:                 #EDE7DA;
+  --muted-foreground:      #7A6B52;
+  --accent:                #163825;
+  --accent-foreground:     #FFFFFF;
+  --destructive:           #DC2626;
+  --destructive-foreground:#FFFFFF;
+  --border:                #E2D9CA;
+  --input:                 #E2D9CA;
+  --ring:                  #C8781A;
+  --radius:                0.625rem;
+
+  /* Charts */
+  --chart-1: #C8781A;
+  --chart-2: #2D6A4F;
+  --chart-3: #E09848;
+  --chart-4: #163825;
+  --chart-5: #F5DDB8;
+
+  /* Sidebar */
+  --sidebar:                    #0B1F14;
+  --sidebar-foreground:         #FAF7F0;
+  --sidebar-primary:            #C8781A;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent:             #163825;
+  --sidebar-accent-foreground:  #FAF7F0;
+  --sidebar-border:             #163825;
+  --sidebar-ring:               #C8781A;
+}
+
+@theme inline {
+  --color-forest-deep:  var(--forest-deep);
+  --color-forest-dark:  var(--forest-dark);
+  --color-forest-mid:   var(--forest-mid);
+  --color-forest-muted: var(--forest-muted);
+  --color-amber:        var(--amber);
+  --color-amber-light:  var(--amber-light);
+  --color-amber-pale:   var(--amber-pale);
+  --color-cream:        var(--cream);
+  --color-cream-dark:   var(--cream-dark);
+  --color-ink:          var(--ink);
+
+  --color-background:            var(--background);
+  --color-foreground:            var(--foreground);
+  --color-card:                  var(--card);
+  --color-card-foreground:       var(--card-foreground);
+  --color-popover:               var(--popover);
+  --color-popover-foreground:    var(--popover-foreground);
+  --color-primary:               var(--primary);
+  --color-primary-foreground:    var(--primary-foreground);
+  --color-secondary:             var(--secondary);
+  --color-secondary-foreground:  var(--secondary-foreground);
+  --color-muted:                 var(--muted);
+  --color-muted-foreground:      var(--muted-foreground);
+  --color-accent:                var(--accent);
+  --color-accent-foreground:     var(--accent-foreground);
+  --color-destructive:           var(--destructive);
+  --color-destructive-foreground:var(--destructive-foreground);
+  --color-border:                var(--border);
+  --color-input:                 var(--input);
+  --color-ring:                  var(--ring);
+
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+
+  --radius-sm: calc(var(--radius) - 2px);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) + 4px);
+  --radius-xl: calc(var(--radius) + 10px);
+
+  --color-sidebar:                    var(--sidebar);
+  --color-sidebar-foreground:         var(--sidebar-foreground);
+  --color-sidebar-primary:            var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent:             var(--sidebar-accent);
+  --color-sidebar-accent-foreground:  var(--sidebar-accent-foreground);
+  --color-sidebar-border:             var(--sidebar-border);
+  --color-sidebar-ring:               var(--sidebar-ring);
+}
