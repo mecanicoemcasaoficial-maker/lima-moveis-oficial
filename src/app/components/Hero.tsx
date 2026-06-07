@@ -20,13 +20,13 @@ const HERO_IMG =
 export function Hero() {
   return (
     <section
-      className="relative min-h-screen overflow-hidden"
+      className="relative overflow-hidden"
       style={{
         background:
-          "radial-gradient(circle at 80% 20%, rgba(200,120,26,0.16), transparent 32%), linear-gradient(135deg, #06120F 0%, #0A1B13 50%, #06120F 100%)",
+          "radial-gradient(circle at 85% 10%, rgba(200,120,26,0.16), transparent 30%), linear-gradient(135deg, #06120F 0%, #0A1B13 50%, #06120F 100%)",
       }}
     >
-      {/* textura premium */}
+      {/* Textura premium */}
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.035]"
         style={{
@@ -37,19 +37,18 @@ export function Hero() {
         }}
       />
 
-      {/* brilhos de fundo */}
+      {/* Brilhos */}
       <div className="pointer-events-none absolute inset-0">
         <div
-          className="absolute -right-40 -top-40 h-[520px] w-[520px] rounded-full opacity-20 blur-[100px]"
+          className="absolute -right-44 -top-44 h-[500px] w-[500px] rounded-full opacity-20 blur-[100px]"
           style={{ background: "#C8781A" }}
         />
         <div
-          className="absolute -bottom-40 -left-40 h-[460px] w-[460px] rounded-full opacity-15 blur-[90px]"
+          className="absolute -bottom-44 -left-44 h-[420px] w-[420px] rounded-full opacity-14 blur-[90px]"
           style={{ background: "#2D6A4F" }}
         />
       </div>
 
-      {/* linha superior */}
       <div
         className="absolute left-0 right-0 top-0 h-px"
         style={{
@@ -58,38 +57,35 @@ export function Hero() {
         }}
       />
 
-      <div className="relative mx-auto grid min-h-screen w-full max-w-7xl grid-cols-1 items-center gap-12 px-5 pb-20 pt-32 sm:px-6 lg:grid-cols-[0.92fr_1.08fr] lg:gap-16 lg:pb-24 lg:pt-36">
+      <div className="relative mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-10 px-5 pb-12 pt-28 sm:px-6 sm:pb-16 sm:pt-32 lg:min-h-screen lg:grid-cols-[0.92fr_1.08fr] lg:gap-16 lg:pb-24 lg:pt-36">
         {/* ESQUERDA */}
         <div className="relative z-10 flex flex-col items-start">
-          <div className="mb-6 flex w-fit items-center gap-2.5 rounded-full border border-[#C8781A]/35 bg-[#C8781A]/10 px-4 py-2 shadow-[0_0_35px_rgba(200,120,26,0.12)]">
-            <Truck size={15} className="shrink-0 text-[#E09848]" />
+          <div className="mb-5 flex w-fit items-center gap-2 rounded-full border border-[#C8781A]/35 bg-[#C8781A]/10 px-3.5 py-2 shadow-[0_0_35px_rgba(200,120,26,0.12)] sm:mb-6 sm:px-4">
+            <Truck size={14} className="shrink-0 text-[#E09848]" />
             <span
               style={{ fontFamily: F }}
-              className="text-xs font-semibold tracking-wide text-[#E7A45E] sm:text-sm"
+              className="text-[11px] font-semibold tracking-wide text-[#E7A45E] sm:text-sm"
             >
               Entrega em Lagoa da Canoa e região
             </span>
           </div>
 
-          <div className="mb-6">
+          <div className="mb-5 sm:mb-6">
             <p
               style={{ fontFamily: F }}
-              className="mb-3 flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.28em] text-white/45"
+              className="mb-3 flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-white/45 sm:text-[11px] sm:tracking-[0.28em]"
             >
-              <Sparkles size={14} className="text-[#C8781A]" />
+              <Sparkles size={13} className="text-[#C8781A]" />
               Lima Móveis & Eletros
             </p>
 
-            <h1
-              style={{ fontFamily: FR }}
-              className="max-w-[780px] text-white"
-            >
-              <span className="block text-[clamp(3rem,6.4vw,5.45rem)] font-black leading-[0.95] tracking-[-0.045em]">
+            <h1 style={{ fontFamily: FR }} className="max-w-[780px] text-white">
+              <span className="block text-[clamp(2.55rem,13vw,4rem)] font-black leading-[0.95] tracking-[-0.045em] sm:text-[clamp(3rem,6.4vw,5.45rem)]">
                 Sua casa
               </span>
 
               <span
-                className="mt-2 block text-[clamp(3rem,6.4vw,5.45rem)] font-black italic leading-[0.95] tracking-[-0.045em]"
+                className="mt-1.5 block text-[clamp(2.55rem,13vw,4rem)] font-black italic leading-[0.95] tracking-[-0.045em] sm:mt-2 sm:text-[clamp(3rem,6.4vw,5.45rem)]"
                 style={{
                   color: "#E6A255",
                   textShadow: "0 10px 45px rgba(200,120,26,0.18)",
@@ -98,7 +94,7 @@ export function Hero() {
                 mais bonita
               </span>
 
-              <span className="mt-2 block text-[clamp(2.75rem,6vw,5.1rem)] font-black leading-[0.98] tracking-[-0.045em]">
+              <span className="mt-1.5 block text-[clamp(2.35rem,12vw,3.75rem)] font-black leading-[0.98] tracking-[-0.045em] sm:mt-2 sm:text-[clamp(2.75rem,6vw,5.1rem)]">
                 começa aqui.
               </span>
             </h1>
@@ -106,26 +102,27 @@ export function Hero() {
 
           <p
             style={{ fontFamily: F }}
-            className="max-w-xl text-[1.03rem] leading-[1.8] text-white/62 sm:text-lg"
+            className="max-w-xl text-[0.98rem] leading-[1.72] text-white/66 sm:text-lg sm:leading-[1.8]"
           >
             Móveis, eletros e produtos para sala, quarto e cozinha com
             atendimento próximo, entrega facilitada e aquela escolha certa para
             transformar seu lar.
           </p>
 
-          <div className="mt-8 flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:items-center">
+          <div className="mt-7 flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:items-center">
             <a
               href={WA}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex items-center justify-center gap-3 rounded-full px-8 py-4 text-base font-bold text-white shadow-[0_12px_38px_rgba(200,120,26,0.38)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_18px_50px_rgba(200,120,26,0.56)] active:scale-95"
+              className="group flex min-h-[56px] items-center justify-center gap-3 rounded-full px-7 py-3.5 text-[0.95rem] font-bold text-white shadow-[0_12px_38px_rgba(200,120,26,0.38)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_18px_50px_rgba(200,120,26,0.56)] active:scale-95 sm:px-8 sm:py-4 sm:text-base"
               style={{
-                background: "linear-gradient(135deg, #D18424 0%, #A65E12 100%)",
+                background:
+                  "linear-gradient(135deg, #D18424 0%, #A65E12 100%)",
                 fontFamily: F,
               }}
             >
               <MessageCircle
-                size={20}
+                size={19}
                 className="transition-transform group-hover:scale-110"
               />
               Falar no WhatsApp
@@ -133,18 +130,19 @@ export function Hero() {
 
             <a
               href="#categorias"
-              className="group flex items-center justify-center gap-2 rounded-full border border-white/15 bg-white/[0.03] px-8 py-4 text-base font-semibold text-white/72 backdrop-blur-sm transition-all duration-300 hover:border-[#C8781A]/55 hover:bg-white/[0.06] hover:text-white"
+              className="group flex min-h-[54px] items-center justify-center gap-2 rounded-full border border-white/15 bg-white/[0.03] px-7 py-3.5 text-[0.95rem] font-semibold text-white/72 backdrop-blur-sm transition-all duration-300 hover:border-[#C8781A]/55 hover:bg-white/[0.06] hover:text-white sm:px-8 sm:py-4 sm:text-base"
               style={{ fontFamily: F }}
             >
               Ver produtos
               <ArrowRight
-                size={17}
+                size={16}
                 className="transition-transform group-hover:translate-x-1"
               />
             </a>
           </div>
 
-          <div className="mt-8 grid w-full max-w-xl grid-cols-1 gap-3 border-t border-white/10 pt-6 sm:grid-cols-3">
+          {/* Selos desktop/tablet */}
+          <div className="mt-7 hidden w-full max-w-xl grid-cols-3 gap-3 border-t border-white/10 pt-5 sm:grid">
             <div className="flex items-center gap-2.5">
               <div className="flex gap-0.5">
                 {[1, 2, 3, 4, 5].map((i) => (
@@ -183,6 +181,40 @@ export function Hero() {
               </span>
             </div>
           </div>
+
+          {/* Selos mobile refinados */}
+          <div className="mt-6 grid w-full grid-cols-2 gap-2 border-t border-white/10 pt-5 sm:hidden">
+            <div className="rounded-2xl border border-white/10 bg-white/[0.035] px-3.5 py-3">
+              <div className="mb-1 flex gap-0.5">
+                {[1, 2, 3, 4, 5].map((i) => (
+                  <Star
+                    key={i}
+                    size={12}
+                    className="fill-[#C8781A] text-[#C8781A]"
+                  />
+                ))}
+              </div>
+              <p
+                style={{ fontFamily: F }}
+                className="text-[11px] font-semibold text-white/58"
+              >
+                5.0 no Google
+              </p>
+            </div>
+
+            <div className="rounded-2xl border border-white/10 bg-white/[0.035] px-3.5 py-3">
+              <div className="mb-1 flex items-center gap-1.5">
+                <ShieldCheck size={14} className="text-[#4AA578]" />
+                <BadgeCheck size={14} className="text-[#E09848]" />
+              </div>
+              <p
+                style={{ fontFamily: F }}
+                className="text-[11px] font-semibold text-white/58"
+              >
+                Atendimento local
+              </p>
+            </div>
+          </div>
         </div>
 
         {/* DIREITA */}
@@ -198,12 +230,12 @@ export function Hero() {
           <div className="absolute -left-4 bottom-10 hidden h-28 w-px bg-gradient-to-b from-transparent via-[#C8781A]/80 to-transparent lg:block" />
           <div className="absolute -bottom-4 left-10 hidden h-px w-28 bg-gradient-to-r from-transparent via-[#C8781A]/80 to-transparent lg:block" />
 
-          <div className="relative overflow-hidden rounded-[28px] border border-white/10 bg-white/[0.04] p-2 shadow-[0_30px_90px_rgba(0,0,0,0.42)] backdrop-blur-sm sm:rounded-[36px] sm:p-3">
-            <div className="relative overflow-hidden rounded-[22px] sm:rounded-[28px]">
+          <div className="relative overflow-hidden rounded-[26px] border border-white/10 bg-white/[0.04] p-2 shadow-[0_30px_90px_rgba(0,0,0,0.42)] backdrop-blur-sm sm:rounded-[36px] sm:p-3">
+            <div className="relative overflow-hidden rounded-[20px] sm:rounded-[28px]">
               <img
                 src={HERO_IMG}
                 alt="Sala moderna com móveis elegantes — Lima Móveis & Eletros"
-                className="h-[360px] w-full object-cover sm:h-[460px] lg:h-[500px]"
+                className="h-[300px] w-full object-cover sm:h-[460px] lg:h-[500px]"
               />
 
               <div
@@ -214,37 +246,37 @@ export function Hero() {
                 }}
               />
 
-              <div className="absolute left-4 top-4 rounded-full border border-white/12 bg-black/25 px-3.5 py-2 backdrop-blur-md sm:left-5 sm:top-5">
+              <div className="absolute left-3 top-3 rounded-full border border-white/12 bg-black/25 px-3 py-1.5 backdrop-blur-md sm:left-5 sm:top-5 sm:px-3.5 sm:py-2">
                 <p
                   style={{ fontFamily: F }}
-                  className="text-[11px] font-semibold uppercase tracking-[0.18em] text-white/75"
+                  className="text-[9px] font-semibold uppercase tracking-[0.16em] text-white/75 sm:text-[11px]"
                 >
                   Ambientes completos
                 </p>
               </div>
 
-              <div className="absolute bottom-4 left-4 right-4 rounded-2xl border border-white/10 bg-[#06120F]/85 p-4 shadow-2xl backdrop-blur-xl sm:bottom-5 sm:left-5 sm:right-auto sm:min-w-[340px] sm:p-5">
+              <div className="absolute bottom-3 left-3 right-3 rounded-2xl border border-white/10 bg-[#06120F]/85 p-3.5 shadow-2xl backdrop-blur-xl sm:bottom-5 sm:left-5 sm:right-auto sm:min-w-[340px] sm:p-5">
                 <div className="flex items-center gap-3">
                   <div
-                    className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl shadow-[0_12px_30px_rgba(200,120,26,0.28)]"
+                    className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl shadow-[0_12px_30px_rgba(200,120,26,0.28)] sm:h-11 sm:w-11"
                     style={{
                       background:
                         "linear-gradient(135deg, #D18424 0%, #A65E12 100%)",
                     }}
                   >
-                    <Truck size={18} className="text-white" />
+                    <Truck size={17} className="text-white" />
                   </div>
 
                   <div>
                     <p
                       style={{ fontFamily: FR }}
-                      className="text-base font-bold leading-tight text-white"
+                      className="text-sm font-bold leading-tight text-white sm:text-base"
                     >
                       A loja que vai até você
                     </p>
                     <p
                       style={{ fontFamily: F }}
-                      className="mt-1 text-xs leading-relaxed text-white/48"
+                      className="mt-1 text-[11px] leading-relaxed text-white/48 sm:text-xs"
                     >
                       Atendimento pelo WhatsApp e entrega combinada.
                     </p>
@@ -253,9 +285,9 @@ export function Hero() {
               </div>
             </div>
 
-            <div className="absolute -right-2 top-12 rounded-2xl border border-[#C8781A]/30 bg-[#06120F]/90 px-4 py-3 shadow-2xl backdrop-blur-xl sm:-right-5 sm:top-16">
-              <div className="flex items-center gap-2">
-                <Star size={14} className="fill-[#C8781A] text-[#C8781A]" />
+            <div className="absolute right-3 top-3 rounded-2xl border border-[#C8781A]/30 bg-[#06120F]/90 px-3 py-2.5 shadow-2xl backdrop-blur-xl sm:-right-5 sm:top-16 sm:px-4 sm:py-3">
+              <div className="flex items-center gap-1.5 sm:gap-2">
+                <Star size={13} className="fill-[#C8781A] text-[#C8781A]" />
                 <span
                   style={{ fontFamily: FR }}
                   className="text-sm font-black text-white"
@@ -264,14 +296,14 @@ export function Hero() {
                 </span>
                 <span
                   style={{ fontFamily: F }}
-                  className="text-xs font-medium text-white/38"
+                  className="hidden text-xs font-medium text-white/38 sm:inline"
                 >
                   Google
                 </span>
               </div>
               <p
                 style={{ fontFamily: F }}
-                className="mt-1 text-center text-[10px] text-white/35"
+                className="mt-0.5 hidden text-center text-[10px] text-white/35 sm:block"
               >
                 Clientes satisfeitos
               </p>
