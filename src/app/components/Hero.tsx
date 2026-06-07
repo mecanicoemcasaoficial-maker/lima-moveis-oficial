@@ -7,7 +7,7 @@ import {
   Star,
   Truck,
 } from "lucide-react";
-import heroLoja from "../../imports/hero-loja.jpg";
+import heroLoja from "../../imports/image-2.jpg";
 
 const WA =
   "https://wa.me/5582996581028?text=Ol%C3%A1%2C%20gostaria%20de%20conhecer%20os%20produtos%20da%20Lima%20M%C3%B3veis%20%26%20Eletros!";
