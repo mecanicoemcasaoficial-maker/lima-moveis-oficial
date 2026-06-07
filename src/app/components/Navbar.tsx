@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Menu, MessageCircle, ShieldCheck, Sofa, Truck, X } from "lucide-react";
+import { Menu, MessageCircle, ShieldCheck, Truck, X } from "lucide-react";
 
 const WA =
   "https://wa.me/5582996581028?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20produtos%20da%20Lima%20M%C3%B3veis%20%26%20Eletros!";
@@ -71,45 +71,22 @@ export function Navbar() {
           className="group flex items-center gap-3"
           aria-label="Ir para o início"
         >
-          {/* LOGO PREMIUM */}
-          <div className="relative flex h-11 w-11 shrink-0 items-center justify-center md:h-12 md:w-12">
-            <div
-              className="absolute inset-0 rounded-2xl opacity-80 blur-[10px] transition-opacity duration-300 group-hover:opacity-100"
-              style={{
-                background:
-                  "radial-gradient(circle, rgba(216,132,36,0.55), transparent 68%)",
-              }}
-            />
-
-            <div
-              className="relative flex h-11 w-11 items-center justify-center overflow-hidden rounded-2xl border border-[#F0B76A]/35 shadow-[0_14px_34px_rgba(200,120,26,0.32)] transition-all duration-300 group-hover:-translate-y-0.5 group-hover:shadow-[0_18px_44px_rgba(200,120,26,0.45)] md:h-12 md:w-12"
-              style={{
-                background:
-                  "linear-gradient(145deg, #E29A3D 0%, #C8781A 45%, #8E4E0C 100%)",
-              }}
+          <div
+            className="relative flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-2xl shadow-[0_12px_32px_rgba(200,120,26,0.28)] transition-transform duration-300 group-hover:scale-105 md:h-11 md:w-11"
+            style={{
+              background: "linear-gradient(135deg, #D18424 0%, #A65E12 100%)",
+            }}
+          >
+            <div className="absolute inset-0 bg-white/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+            <span
+              style={{ fontFamily: FR, lineHeight: 1 }}
+              className="relative text-sm font-black italic text-white md:text-[15px]"
             >
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.28),transparent_34%)]" />
-              <div className="absolute -right-3 -top-3 h-8 w-8 rounded-full bg-white/10 blur-md" />
-
-              <div className="relative flex flex-col items-center justify-center">
-                <span
-                  style={{ fontFamily: FR, lineHeight: 0.9 }}
-                  className="text-[13px] font-black italic tracking-[-0.04em] text-white md:text-sm"
-                >
-                  LM
-                </span>
-
-                <div className="mt-[2px] flex items-center gap-[2px] text-white/78">
-                  <span className="h-[1px] w-2 rounded-full bg-white/55" />
-                  <Sofa size={8} strokeWidth={2.4} />
-                  <span className="h-[1px] w-2 rounded-full bg-white/55" />
-                </div>
-              </div>
-            </div>
+              LM
+            </span>
           </div>
 
-          {/* TEXTO DA MARCA */}
-          <div className="flex flex-col justify-center gap-[1px]">
+          <div className="flex flex-col justify-center gap-[2px]">
             <span
               style={{ fontFamily: FR, lineHeight: 1 }}
               className="block text-[1rem] font-black tracking-[-0.02em] text-white md:text-[1.08rem]"
@@ -179,7 +156,7 @@ export function Navbar() {
 
       {open && (
         <div
-          className="fixed inset-x-0 top-[66px] z-50 border-t border-white/10 px-5 pb-7 pt-5 shadow-[0_28px_70px_rgba(0,0,0,0.42)] md:hidden"
+          className="fixed inset-x-0 top-[66px] z-50 border-t border-white/10 px-5 pb-7 pt-5 shadow-[0_28px_70px_rgba(0,0,0,0.42)] md:top-[104px] md:hidden"
           style={{
             background: "rgba(6,18,15,0.98)",
             backdropFilter: "blur(24px)",
