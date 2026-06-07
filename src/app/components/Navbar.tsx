@@ -46,7 +46,6 @@ export function Navbar() {
         borderBottom: scrolled ? "1px solid rgba(255,255,255,0.08)" : "none",
       }}
     >
-      {/* Faixa fixa desktop */}
       <div
         className="hidden items-center justify-center gap-3 border-b border-white/10 px-6 py-2 text-xs md:flex"
         style={{
@@ -65,7 +64,7 @@ export function Navbar() {
         </span>
       </div>
 
-      <div className="mx-auto flex h-[70px] max-w-7xl items-center justify-between px-5 sm:px-6 md:h-[72px]">
+      <div className="mx-auto flex h-[66px] max-w-7xl items-center justify-between px-5 sm:px-6 md:h-[72px]">
         <a
           href="#"
           onClick={() => setOpen(false)}
@@ -80,28 +79,27 @@ export function Navbar() {
           >
             <div className="absolute inset-0 bg-white/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
             <span
-              style={{ fontFamily: FR }}
+              style={{ fontFamily: FR, lineHeight: 1 }}
               className="relative text-sm font-black italic text-white md:text-[15px]"
             >
               LM
             </span>
           </div>
 
-          {/* LOGO TEXT AJUSTADO */}
-          <div className="flex h-10 flex-col justify-center md:h-11">
-            <p
-              style={{ fontFamily: FR }}
-              className="m-0 text-[1rem] font-black leading-[1.05] tracking-[-0.02em] text-white md:text-[1.08rem]"
+          <div className="flex flex-col justify-center gap-[2px]">
+            <span
+              style={{ fontFamily: FR, lineHeight: 1 }}
+              className="block text-[1rem] font-black tracking-[-0.02em] text-white md:text-[1.08rem]"
             >
               Lima Móveis
-            </p>
+            </span>
 
-            <p
-              style={{ fontFamily: F }}
-              className="m-0 mt-[5px] text-[10px] font-bold uppercase leading-[1] tracking-[0.18em] text-[#E6A255] md:text-[10.5px] md:tracking-[0.2em]"
+            <span
+              style={{ fontFamily: F, lineHeight: 1 }}
+              className="block text-[10px] font-bold uppercase tracking-[0.14em] text-[#E6A255] md:text-[10.5px] md:tracking-[0.18em]"
             >
               &amp; Eletros
-            </p>
+            </span>
           </div>
         </a>
 
@@ -158,7 +156,7 @@ export function Navbar() {
 
       {open && (
         <div
-          className="fixed inset-x-0 top-[70px] z-50 border-t border-white/10 px-5 pb-7 pt-5 shadow-[0_28px_70px_rgba(0,0,0,0.42)] md:hidden"
+          className="fixed inset-x-0 top-[66px] z-50 border-t border-white/10 px-5 pb-7 pt-5 shadow-[0_28px_70px_rgba(0,0,0,0.42)] md:top-[104px] md:hidden"
           style={{
             background: "rgba(6,18,15,0.98)",
             backdropFilter: "blur(24px)",
