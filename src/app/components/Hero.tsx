@@ -26,7 +26,6 @@ export function Hero() {
           "radial-gradient(circle at 85% 10%, rgba(200,120,26,0.16), transparent 30%), linear-gradient(135deg, #06120F 0%, #0A1B13 50%, #06120F 100%)",
       }}
     >
-      {/* Textura premium */}
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.035]"
         style={{
@@ -37,7 +36,6 @@ export function Hero() {
         }}
       />
 
-      {/* Brilhos */}
       <div className="pointer-events-none absolute inset-0">
         <div
           className="absolute -right-44 -top-44 h-[500px] w-[500px] rounded-full opacity-20 blur-[100px]"
@@ -57,8 +55,7 @@ export function Hero() {
         }}
       />
 
-      <div className="relative mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-10 px-5 pb-12 pt-28 sm:px-6 sm:pb-16 sm:pt-32 lg:min-h-screen lg:grid-cols-[0.92fr_1.08fr] lg:gap-16 lg:pb-24 lg:pt-36">
-        {/* ESQUERDA */}
+      <div className="relative mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-10 px-5 pb-12 pt-[5.6rem] sm:px-6 sm:pb-16 sm:pt-32 lg:min-h-screen lg:grid-cols-[0.92fr_1.08fr] lg:gap-16 lg:pb-24 lg:pt-36">
         <div className="relative z-10 flex flex-col items-start">
           <div className="mb-5 flex w-fit items-center gap-2 rounded-full border border-[#C8781A]/35 bg-[#C8781A]/10 px-3.5 py-2 shadow-[0_0_35px_rgba(200,120,26,0.12)] sm:mb-6 sm:px-4">
             <Truck size={14} className="shrink-0 text-[#E09848]" />
@@ -141,7 +138,6 @@ export function Hero() {
             </a>
           </div>
 
-          {/* Selos desktop/tablet */}
           <div className="mt-7 hidden w-full max-w-xl grid-cols-3 gap-3 border-t border-white/10 pt-5 sm:grid">
             <div className="flex items-center gap-2.5">
               <div className="flex gap-0.5">
@@ -182,7 +178,6 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Selos mobile refinados */}
           <div className="mt-6 grid w-full grid-cols-2 gap-2 border-t border-white/10 pt-5 sm:hidden">
             <div className="rounded-2xl border border-white/10 bg-white/[0.035] px-3.5 py-3">
               <div className="mb-1 flex gap-0.5">
@@ -217,7 +212,6 @@ export function Hero() {
           </div>
         </div>
 
-        {/* DIREITA */}
         <div className="relative z-10 mx-auto w-full max-w-[640px] lg:mr-0">
           <div
             className="absolute -inset-6 rounded-[42px] opacity-20 blur-[45px]"
