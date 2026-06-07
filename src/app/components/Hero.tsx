@@ -21,9 +21,10 @@ export function Hero() {
       className="relative overflow-hidden"
       style={{
         background:
-          "radial-gradient(circle at 85% 10%, rgba(200,120,26,0.16), transparent 30%), linear-gradient(135deg, #06120F 0%, #0A1B13 50%, #06120F 100%)",
+          "radial-gradient(circle at 85% 10%, rgba(200,120,26,0.18), transparent 28%), linear-gradient(135deg, #06120F 0%, #0A1B13 50%, #06120F 100%)",
       }}
     >
+      {/* textura */}
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.035]"
         style={{
@@ -34,17 +35,19 @@ export function Hero() {
         }}
       />
 
+      {/* brilhos */}
       <div className="pointer-events-none absolute inset-0">
         <div
-          className="absolute -right-44 -top-44 h-[500px] w-[500px] rounded-full opacity-20 blur-[100px]"
+          className="absolute -right-44 -top-44 h-[520px] w-[520px] rounded-full opacity-20 blur-[110px]"
           style={{ background: "#C8781A" }}
         />
         <div
-          className="absolute -bottom-44 -left-44 h-[420px] w-[420px] rounded-full opacity-14 blur-[90px]"
+          className="absolute -bottom-44 -left-44 h-[420px] w-[420px] rounded-full opacity-15 blur-[95px]"
           style={{ background: "#2D6A4F" }}
         />
       </div>
 
+      {/* linha premium */}
       <div
         className="absolute left-0 right-0 top-0 h-px"
         style={{
@@ -110,7 +113,7 @@ export function Hero() {
               href={WA}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex min-h-[56px] items-center justify-center gap-3 rounded-full px-7 py-3.5 text-[0.95rem] font-bold text-white shadow-[0_12px_38px_rgba(200,120,26,0.38)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_18px_50px_rgba(200,120,26,0.56)] active:scale-95 sm:px-8 sm:py-4 sm:text-base"
+              className="group flex min-h-[56px] items-center justify-center gap-3 rounded-full px-7 py-3.5 text-[0.95rem] font-bold text-white shadow-[0_12px_38px_rgba(200,120,26,0.38)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_18px_50px_rgba(200,120,26,0.56)] active:scale-95"
               style={{
                 background:
                   "linear-gradient(135deg, #D18424 0%, #A65E12 100%)",
@@ -126,7 +129,7 @@ export function Hero() {
 
             <a
               href="#categorias"
-              className="group flex min-h-[54px] items-center justify-center gap-2 rounded-full border border-white/15 bg-white/[0.03] px-7 py-3.5 text-[0.95rem] font-semibold text-white/72 backdrop-blur-sm transition-all duration-300 hover:border-[#C8781A]/55 hover:bg-white/[0.06] hover:text-white sm:px-8 sm:py-4 sm:text-base"
+              className="group flex min-h-[54px] items-center justify-center gap-2 rounded-full border border-white/15 bg-white/[0.03] px-7 py-3.5 text-[0.95rem] font-semibold text-white/72 backdrop-blur-sm transition-all duration-300 hover:border-[#C8781A]/55 hover:bg-white/[0.06] hover:text-white"
               style={{ fontFamily: F }}
             >
               Ver produtos
@@ -137,8 +140,9 @@ export function Hero() {
             </a>
           </div>
 
+          {/* selos desktop */}
           <div className="mt-7 hidden w-full max-w-xl grid-cols-3 gap-3 border-t border-white/10 pt-5 sm:grid">
-            <div className="flex items-center gap-2.5">
+            <div className="flex items-center gap-2.5 rounded-2xl border border-white/8 bg-white/[0.025] px-3 py-3">
               <div className="flex gap-0.5">
                 {[1, 2, 3, 4, 5].map((i) => (
                   <Star
@@ -150,35 +154,36 @@ export function Hero() {
               </div>
               <span
                 style={{ fontFamily: F }}
-                className="text-xs font-medium text-white/55"
+                className="text-xs font-medium text-white/60"
               >
                 5.0 no Google
               </span>
             </div>
 
-            <div className="flex items-center gap-2.5">
+            <div className="flex items-center gap-2.5 rounded-2xl border border-white/8 bg-white/[0.025] px-3 py-3">
               <ShieldCheck size={15} className="text-[#4AA578]" />
               <span
                 style={{ fontFamily: F }}
-                className="text-xs font-medium text-white/55"
+                className="text-xs font-medium text-white/60"
               >
                 Compra segura
               </span>
             </div>
 
-            <div className="flex items-center gap-2.5">
+            <div className="flex items-center gap-2.5 rounded-2xl border border-white/8 bg-white/[0.025] px-3 py-3">
               <BadgeCheck size={15} className="text-[#E09848]" />
               <span
                 style={{ fontFamily: F }}
-                className="text-xs font-medium text-white/55"
+                className="text-xs font-medium text-white/60"
               >
                 Atendimento local
               </span>
             </div>
           </div>
 
+          {/* selos mobile */}
           <div className="mt-6 grid w-full grid-cols-2 gap-2 border-t border-white/10 pt-5 sm:hidden">
-            <div className="rounded-2xl border border-white/10 bg-white/[0.035] px-3.5 py-3">
+            <div className="rounded-2xl border border-white/10 bg-white/[0.035] px-3.5 py-3 shadow-[0_10px_25px_rgba(0,0,0,0.14)]">
               <div className="mb-1 flex gap-0.5">
                 {[1, 2, 3, 4, 5].map((i) => (
                   <Star
@@ -196,7 +201,7 @@ export function Hero() {
               </p>
             </div>
 
-            <div className="rounded-2xl border border-white/10 bg-white/[0.035] px-3.5 py-3">
+            <div className="rounded-2xl border border-white/10 bg-white/[0.035] px-3.5 py-3 shadow-[0_10px_25px_rgba(0,0,0,0.14)]">
               <div className="mb-1 flex items-center gap-1.5">
                 <ShieldCheck size={14} className="text-[#4AA578]" />
                 <BadgeCheck size={14} className="text-[#E09848]" />
@@ -213,43 +218,50 @@ export function Hero() {
 
         {/* DIREITA */}
         <div className="relative z-10 mx-auto w-full max-w-[560px] lg:mr-0">
+          {/* brilho externo */}
           <div
-            className="absolute -inset-6 rounded-[42px] opacity-20 blur-[45px]"
+            className="absolute -inset-6 rounded-[42px] opacity-25 blur-[45px]"
             style={{
               background:
-                "radial-gradient(ellipse at center, rgba(200,120,26,0.9), transparent 62%)",
+                "radial-gradient(ellipse at center, rgba(200,120,26,0.95), transparent 62%)",
             }}
           />
 
-          <div className="absolute -left-4 bottom-10 hidden h-28 w-px bg-gradient-to-b from-transparent via-[#C8781A]/80 to-transparent lg:block" />
-          <div className="absolute -bottom-4 left-10 hidden h-px w-28 bg-gradient-to-r from-transparent via-[#C8781A]/80 to-transparent lg:block" />
+          {/* detalhe decorativo */}
+          <div className="absolute -left-3 top-10 hidden h-24 w-px bg-gradient-to-b from-transparent via-[#C8781A]/80 to-transparent lg:block" />
+          <div className="absolute -bottom-3 left-10 hidden h-px w-24 bg-gradient-to-r from-transparent via-[#C8781A]/80 to-transparent lg:block" />
 
-          <div className="relative overflow-hidden rounded-[26px] border border-white/10 bg-white/[0.04] p-2 shadow-[0_30px_90px_rgba(0,0,0,0.42)] backdrop-blur-sm sm:rounded-[32px] sm:p-3">
+          <div className="group relative overflow-hidden rounded-[26px] border border-white/10 bg-white/[0.04] p-2 shadow-[0_30px_90px_rgba(0,0,0,0.42)] backdrop-blur-sm sm:rounded-[32px] sm:p-3">
+            {/* borda viva */}
+            <div className="pointer-events-none absolute inset-0 rounded-[26px] border border-[#E6A255]/20 sm:rounded-[32px]" />
+
+            {/* brilho animado visual */}
+            <div
+              className="pointer-events-none absolute -left-20 top-0 h-full w-24 rotate-12 opacity-20 blur-xl transition-all duration-700 group-hover:left-[110%]"
+              style={{
+                background:
+                  "linear-gradient(180deg, transparent 0%, rgba(255,255,255,0.35) 50%, transparent 100%)",
+              }}
+            />
+
             <div className="relative overflow-hidden rounded-[20px] sm:rounded-[26px]">
               <img
                 src={heroLoja}
                 alt="Fachada da loja Lima Móveis & Eletros"
-                className="aspect-square w-full object-cover object-top"
+                className="aspect-square w-full object-cover object-top transition-transform duration-700 group-hover:scale-[1.03]"
               />
 
+              {/* overlay muito mais leve */}
               <div
                 className="pointer-events-none absolute inset-0"
                 style={{
                   background:
-                    "linear-gradient(to top, rgba(6,18,15,0.18) 0%, rgba(6,18,15,0.04) 36%, rgba(6,18,15,0) 68%)",
+                    "linear-gradient(to top, rgba(6,18,15,0.10) 0%, rgba(6,18,15,0.03) 38%, rgba(6,18,15,0) 68%)",
                 }}
               />
 
-              <div className="absolute left-3 top-3 rounded-full border border-white/12 bg-black/28 px-3 py-1.5 backdrop-blur-md sm:left-5 sm:top-5 sm:px-3.5 sm:py-2">
-                <p
-                  style={{ fontFamily: F }}
-                  className="text-[9px] font-semibold uppercase tracking-[0.16em] text-white/82 sm:text-[11px]"
-                >
-                  Ambientes completos
-                </p>
-              </div>
-
-              <div className="absolute right-3 top-3 rounded-2xl border border-[#C8781A]/30 bg-[#06120F]/92 px-3 py-2 shadow-2xl backdrop-blur-xl sm:right-5 sm:top-5 sm:px-3.5 sm:py-2.5">
+              {/* selo 5.0 */}
+              <div className="absolute right-3 top-3 rounded-2xl border border-[#C8781A]/35 bg-[#06120F]/92 px-3 py-2 shadow-[0_10px_24px_rgba(0,0,0,0.25)] backdrop-blur-xl sm:right-5 sm:top-5 sm:px-3.5 sm:py-2.5">
                 <div className="flex items-center gap-1.5">
                   <Star size={13} className="fill-[#C8781A] text-[#C8781A]" />
                   <span
@@ -261,7 +273,8 @@ export function Hero() {
                 </div>
               </div>
 
-              <div className="absolute bottom-3 left-3 max-w-[82%] rounded-2xl border border-white/10 bg-[#06120F]/88 px-4 py-3.5 shadow-2xl backdrop-blur-xl sm:bottom-5 sm:left-5 sm:max-w-[320px] sm:px-4 sm:py-3.5">
+              {/* faixa menor no canto esquerdo inferior */}
+              <div className="absolute bottom-3 left-3 max-w-[78%] rounded-2xl border border-white/10 bg-[#06120F]/82 px-3.5 py-3 shadow-[0_18px_40px_rgba(0,0,0,0.28)] backdrop-blur-xl sm:bottom-5 sm:left-5 sm:max-w-[285px] sm:px-4 sm:py-3">
                 <div className="flex items-start gap-3">
                   <div
                     className="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl shadow-[0_12px_30px_rgba(200,120,26,0.28)]"
@@ -282,13 +295,22 @@ export function Hero() {
                     </p>
                     <p
                       style={{ fontFamily: F }}
-                      className="mt-1 text-[11px] leading-relaxed text-white/55 sm:text-xs"
+                      className="mt-1 text-[11px] leading-relaxed text-white/58 sm:text-xs"
                     >
                       Atendimento pelo WhatsApp e entrega combinada.
                     </p>
                   </div>
                 </div>
               </div>
+
+              {/* brilho inferior para dar vida */}
+              <div
+                className="pointer-events-none absolute -bottom-10 left-1/2 h-24 w-[70%] -translate-x-1/2 rounded-full opacity-35 blur-2xl"
+                style={{
+                  background:
+                    "radial-gradient(circle, rgba(200,120,26,0.55) 0%, transparent 68%)",
+                }}
+              />
             </div>
           </div>
         </div>
