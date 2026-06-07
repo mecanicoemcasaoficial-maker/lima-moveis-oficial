@@ -1,4 +1,4 @@
-import storeFront from "../../imports/image-2.png";
+import storeFront from "../../imports/image-2.jpg";
 import { MapPin, Phone, Clock, CheckCircle2, MessageCircle } from "lucide-react";
 
 const WA = "https://wa.me/5582996581028?text=Ol%C3%A1%2C%20quero%20conhecer%20mais%20sobre%20a%20Lima%20M%C3%B3veis!";
