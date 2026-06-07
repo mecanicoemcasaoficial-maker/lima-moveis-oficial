@@ -1,7 +1,9 @@
-import { useState, useEffect } from "react";
-import { Menu, X, MessageCircle, Truck } from "lucide-react";
+import { useEffect, useState } from "react";
+import { Menu, MessageCircle, ShieldCheck, Truck, X } from "lucide-react";
 
-const WA = "https://wa.me/5582996581028?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20produtos!";
+const WA =
+  "https://wa.me/5582996581028?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20produtos%20da%20Lima%20M%C3%B3veis%20%26%20Eletros!";
+
 const F = "'Outfit', sans-serif";
 const FR = "'Fraunces', serif";
 
@@ -17,82 +19,198 @@ export function Navbar() {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    const fn = () => setScrolled(window.scrollY > 48);
-    window.addEventListener("scroll", fn);
-    return () => window.removeEventListener("scroll", fn);
+    const handleScroll = () => setScrolled(window.scrollY > 42);
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "";
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
+
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-      scrolled ? "shadow-xl" : ""
-    }`}
-      style={{ background: scrolled ? "rgba(7,20,16,0.97)" : "transparent", backdropFilter: scrolled ? "blur(16px)" : "none" }}
+    <nav
+      className={`fixed left-0 right-0 top-0 z-50 transition-all duration-500 ${
+        scrolled ? "shadow-[0_18px_60px_rgba(0,0,0,0.28)]" : ""
+      }`}
+      style={{
+        background: scrolled ? "rgba(6,18,15,0.92)" : "transparent",
+        backdropFilter: scrolled ? "blur(22px)" : "none",
+        borderBottom: scrolled ? "1px solid rgba(255,255,255,0.08)" : "none",
+      }}
     >
-      {/* Delivery ticker */}
       {!scrolled && (
-        <div className="hidden md:flex items-center justify-center gap-3 py-2 text-xs border-b border-white/10"
-          style={{ background: "#C8781A", fontFamily: F }}>
-          <Truck size={13} className="text-white" />
-          <span className="text-white font-semibold tracking-wide">🚚 ENTREGAMOS NA SUA PORTA — A loja que vai até você!</span>
-          <Truck size={13} className="text-white" />
+        <div
+          className="hidden items-center justify-center gap-3 border-b border-white/10 px-6 py-2 text-xs md:flex"
+          style={{
+            background:
+              "linear-gradient(90deg, #A65E12 0%, #C8781A 50%, #A65E12 100%)",
+            fontFamily: F,
+          }}
+        >
+          <Truck size={13} className="shrink-0 text-white" />
+          <span className="font-bold tracking-[0.16em] text-white">
+            ENTREGA EM LAGOA DA CANOA E REGIÃO
+          </span>
+          <ShieldCheck size={13} className="shrink-0 text-white" />
+          <span className="font-semibold tracking-wide text-white/90">
+            atendimento direto pelo WhatsApp
+          </span>
         </div>
       )}
 
-      <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-16 md:h-[68px]">
-        {/* Logo */}
-        <a href="#" className="flex items-center gap-3 group">
-          <div className="w-9 h-9 rounded-lg flex items-center justify-center shrink-0 transition-transform group-hover:scale-105"
-            style={{ background: "linear-gradient(135deg, #C8781A, #E09848)" }}>
-            <span style={{ fontFamily: FR }} className="text-white font-bold text-sm italic">LM</span>
+      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 sm:px-6 md:h-[72px]">
+        <a
+          href="#"
+          onClick={() => setOpen(false)}
+          className="group flex items-center gap-3"
+          aria-label="Ir para o início"
+        >
+          <div
+            className="relative flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-2xl shadow-[0_12px_32px_rgba(200,120,26,0.28)] transition-transform duration-300 group-hover:scale-105"
+            style={{
+              background: "linear-gradient(135deg, #D18424 0%, #A65E12 100%)",
+            }}
+          >
+            <div className="absolute inset-0 bg-white/10 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+            <span
+              style={{ fontFamily: FR }}
+              className="relative text-sm font-black italic text-white"
+            >
+              LM
+            </span>
           </div>
+
           <div className="leading-none">
-            <p style={{ fontFamily: FR }} className="text-white font-bold text-base leading-tight">Lima Móveis</p>
-            <p style={{ fontFamily: F }} className="text-[#E09848] text-[10px] tracking-[0.18em] uppercase leading-tight">&amp; Eletros</p>
+            <p
+              style={{ fontFamily: FR }}
+              className="text-[1.05rem] font-black leading-tight tracking-[-0.02em] text-white"
+            >
+              Lima Móveis
+            </p>
+            <p
+              style={{ fontFamily: F }}
+              className="mt-1 text-[10px] font-bold uppercase tracking-[0.22em] text-[#E6A255]"
+            >
+              &amp; Eletros
+            </p>
           </div>
         </a>
 
-        {/* Desktop nav */}
-        <ul className="hidden md:flex items-center gap-8">
-          {links.map(l => (
-            <li key={l.href}>
-              <a href={l.href} style={{ fontFamily: F }}
-                className="text-white/70 hover:text-white text-sm font-medium tracking-wide transition-colors duration-200">
-                {l.label}
+        <ul className="hidden items-center gap-1 md:flex">
+          {links.map((link) => (
+            <li key={link.href}>
+              <a
+                href={link.href}
+                style={{ fontFamily: F }}
+                className="rounded-full px-4 py-2 text-sm font-semibold text-white/62 transition-all duration-300 hover:bg-white/[0.06] hover:text-white"
+              >
+                {link.label}
               </a>
             </li>
           ))}
         </ul>
 
-        {/* CTA */}
-        <a href={WA} target="_blank" rel="noopener noreferrer"
-          className="hidden md:flex items-center gap-2 px-5 py-2.5 rounded-full text-white text-sm font-semibold transition-all duration-300 active:scale-95 hover:shadow-[0_4px_20px_rgba(200,120,26,0.5)]"
-          style={{ background: "linear-gradient(135deg, #C8781A, #A85F10)", fontFamily: F }}>
-          <MessageCircle size={15} />
-          Fale pelo WhatsApp
-        </a>
+        <div className="hidden items-center gap-3 md:flex">
+          <a
+            href="#categorias"
+            style={{ fontFamily: F }}
+            className="rounded-full border border-white/12 bg-white/[0.03] px-5 py-2.5 text-sm font-semibold text-white/70 transition-all duration-300 hover:border-[#C8781A]/45 hover:bg-white/[0.06] hover:text-white"
+          >
+            Ver catálogo
+          </a>
 
-        {/* Mobile toggle */}
-        <button className="md:hidden text-white p-2" onClick={() => setOpen(!open)}>
+          <a
+            href={WA}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-bold text-white shadow-[0_10px_30px_rgba(200,120,26,0.30)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_16px_42px_rgba(200,120,26,0.46)] active:scale-95"
+            style={{
+              background: "linear-gradient(135deg, #D18424 0%, #A65E12 100%)",
+              fontFamily: F,
+            }}
+          >
+            <MessageCircle
+              size={16}
+              className="transition-transform group-hover:scale-110"
+            />
+            WhatsApp
+          </a>
+        </div>
+
+        <button
+          type="button"
+          onClick={() => setOpen((value) => !value)}
+          className="flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.04] text-white backdrop-blur-md transition-all duration-300 active:scale-95 md:hidden"
+          aria-label={open ? "Fechar menu" : "Abrir menu"}
+        >
           {open ? <X size={22} /> : <Menu size={22} />}
         </button>
       </div>
 
-      {/* Mobile menu */}
       {open && (
-        <div className="md:hidden border-t border-white/10 px-6 py-6 flex flex-col gap-5"
-          style={{ background: "rgba(7,20,16,0.98)", backdropFilter: "blur(20px)" }}>
-          {links.map(l => (
-            <a key={l.href} href={l.href} onClick={() => setOpen(false)}
-              style={{ fontFamily: F }} className="text-white/80 text-base font-medium">
-              {l.label}
-            </a>
-          ))}
-          <a href={WA} target="_blank" rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2 text-white px-5 py-3.5 rounded-full font-semibold mt-1"
-            style={{ background: "linear-gradient(135deg, #C8781A, #A85F10)", fontFamily: F }}>
-            <MessageCircle size={16} />
-            Fale pelo WhatsApp
+        <div
+          className="fixed inset-x-0 top-16 z-50 border-t border-white/10 px-5 pb-7 pt-5 shadow-[0_28px_70px_rgba(0,0,0,0.42)] md:hidden"
+          style={{
+            background: "rgba(6,18,15,0.98)",
+            backdropFilter: "blur(24px)",
+          }}
+        >
+          <div className="mb-5 rounded-3xl border border-[#C8781A]/20 bg-[#C8781A]/10 px-4 py-3">
+            <div className="flex items-center gap-2.5">
+              <Truck size={16} className="shrink-0 text-[#E6A255]" />
+              <p
+                style={{ fontFamily: F }}
+                className="text-sm font-semibold leading-relaxed text-white/78"
+              >
+                Entrega combinada em Lagoa da Canoa e região.
+              </p>
+            </div>
+          </div>
+
+          <div className="flex flex-col gap-2">
+            {links.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                onClick={() => setOpen(false)}
+                style={{ fontFamily: F }}
+                className="flex items-center justify-between rounded-2xl border border-white/8 bg-white/[0.035] px-4 py-4 text-base font-semibold text-white/82 transition-all duration-300 active:scale-[0.99]"
+              >
+                {link.label}
+                <span className="h-1.5 w-1.5 rounded-full bg-[#C8781A]" />
+              </a>
+            ))}
+          </div>
+
+          <a
+            href={WA}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setOpen(false)}
+            className="mt-5 flex items-center justify-center gap-2.5 rounded-full px-5 py-4 text-base font-bold text-white shadow-[0_14px_38px_rgba(200,120,26,0.36)] active:scale-95"
+            style={{
+              background: "linear-gradient(135deg, #D18424 0%, #A65E12 100%)",
+              fontFamily: F,
+            }}
+          >
+            <MessageCircle size={18} />
+            Falar pelo WhatsApp
           </a>
+
+          <p
+            style={{ fontFamily: F }}
+            className="mt-4 text-center text-xs leading-relaxed text-white/38"
+          >
+            Lima Móveis & Eletros • atendimento local e entrega facilitada.
+          </p>
         </div>
       )}
     </nav>
