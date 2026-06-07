@@ -88,16 +88,16 @@ export function Navbar() {
             </span>
           </div>
 
-          <div className="leading-none">
+          <div className="flex flex-col justify-center">
             <p
               style={{ fontFamily: FR }}
-              className="text-[1.05rem] font-black leading-tight tracking-[-0.02em] text-white"
+              className="text-[1.02rem] font-black leading-[1.02] tracking-[-0.02em] text-white"
             >
               Lima Móveis
             </p>
             <p
               style={{ fontFamily: F }}
-              className="mt-1 text-[10px] font-bold uppercase tracking-[0.22em] text-[#E6A255]"
+              className="mt-[2px] text-[11px] font-bold uppercase leading-none tracking-[0.16em] text-[#E6A255]"
             >
               &amp; Eletros
             </p>

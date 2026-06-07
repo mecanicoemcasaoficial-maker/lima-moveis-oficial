@@ -7,15 +7,13 @@ import {
   Star,
   Truck,
 } from "lucide-react";
+import heroLoja from "../../imports/hero-loja.jpg";
 
 const WA =
   "https://wa.me/5582996581028?text=Ol%C3%A1%2C%20gostaria%20de%20conhecer%20os%20produtos%20da%20Lima%20M%C3%B3veis%20%26%20Eletros!";
 
 const F = "'Outfit', sans-serif";
 const FR = "'Fraunces', serif";
-
-const HERO_IMG =
-  "https://images.unsplash.com/photo-1724582586529-62622e50c0b3?w=1400&h=1000&fit=crop&auto=format&q=90";
 
 export function Hero() {
   return (
@@ -56,6 +54,7 @@ export function Hero() {
       />
 
       <div className="relative mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-10 px-5 pb-12 pt-[5.6rem] sm:px-6 sm:pb-16 sm:pt-32 lg:min-h-screen lg:grid-cols-[0.92fr_1.08fr] lg:gap-16 lg:pb-24 lg:pt-36">
+        {/* ESQUERDA */}
         <div className="relative z-10 flex flex-col items-start">
           <div className="mb-5 flex w-fit items-center gap-2 rounded-full border border-[#C8781A]/35 bg-[#C8781A]/10 px-3.5 py-2 shadow-[0_0_35px_rgba(200,120,26,0.12)] sm:mb-6 sm:px-4">
             <Truck size={14} className="shrink-0 text-[#E09848]" />
@@ -70,7 +69,7 @@ export function Hero() {
           <div className="mb-5 sm:mb-6">
             <p
               style={{ fontFamily: F }}
-              className="mb-3 flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-white/45 sm:text-[11px] sm:tracking-[0.28em]"
+              className="mb-3 flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.14em] text-white/45 sm:text-[11px] sm:tracking-[0.24em]"
             >
               <Sparkles size={13} className="text-[#C8781A]" />
               Lima Móveis & Eletros
@@ -212,7 +211,8 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="relative z-10 mx-auto w-full max-w-[640px] lg:mr-0">
+        {/* DIREITA */}
+        <div className="relative z-10 mx-auto w-full max-w-[560px] lg:mr-0">
           <div
             className="absolute -inset-6 rounded-[42px] opacity-20 blur-[45px]"
             style={{
@@ -224,83 +224,71 @@ export function Hero() {
           <div className="absolute -left-4 bottom-10 hidden h-28 w-px bg-gradient-to-b from-transparent via-[#C8781A]/80 to-transparent lg:block" />
           <div className="absolute -bottom-4 left-10 hidden h-px w-28 bg-gradient-to-r from-transparent via-[#C8781A]/80 to-transparent lg:block" />
 
-          <div className="relative overflow-hidden rounded-[26px] border border-white/10 bg-white/[0.04] p-2 shadow-[0_30px_90px_rgba(0,0,0,0.42)] backdrop-blur-sm sm:rounded-[36px] sm:p-3">
-            <div className="relative overflow-hidden rounded-[20px] sm:rounded-[28px]">
+          <div className="relative overflow-hidden rounded-[26px] border border-white/10 bg-white/[0.04] p-2 shadow-[0_30px_90px_rgba(0,0,0,0.42)] backdrop-blur-sm sm:rounded-[32px] sm:p-3">
+            <div className="relative overflow-hidden rounded-[20px] sm:rounded-[26px]">
               <img
-                src={HERO_IMG}
-                alt="Sala moderna com móveis elegantes — Lima Móveis & Eletros"
-                className="h-[300px] w-full object-cover sm:h-[460px] lg:h-[500px]"
+                src={heroLoja}
+                alt="Fachada da loja Lima Móveis & Eletros"
+                className="aspect-square w-full object-cover object-top"
               />
 
               <div
                 className="pointer-events-none absolute inset-0"
                 style={{
                   background:
-                    "linear-gradient(to top, rgba(6,18,15,0.78) 0%, rgba(6,18,15,0.16) 46%, rgba(6,18,15,0) 100%)",
+                    "linear-gradient(to top, rgba(6,18,15,0.18) 0%, rgba(6,18,15,0.04) 36%, rgba(6,18,15,0) 68%)",
                 }}
               />
 
-              <div className="absolute left-3 top-3 rounded-full border border-white/12 bg-black/25 px-3 py-1.5 backdrop-blur-md sm:left-5 sm:top-5 sm:px-3.5 sm:py-2">
+              <div className="absolute left-3 top-3 rounded-full border border-white/12 bg-black/28 px-3 py-1.5 backdrop-blur-md sm:left-5 sm:top-5 sm:px-3.5 sm:py-2">
                 <p
                   style={{ fontFamily: F }}
-                  className="text-[9px] font-semibold uppercase tracking-[0.16em] text-white/75 sm:text-[11px]"
+                  className="text-[9px] font-semibold uppercase tracking-[0.16em] text-white/82 sm:text-[11px]"
                 >
                   Ambientes completos
                 </p>
               </div>
 
-              <div className="absolute bottom-3 left-3 right-3 rounded-2xl border border-white/10 bg-[#06120F]/85 p-3.5 shadow-2xl backdrop-blur-xl sm:bottom-5 sm:left-5 sm:right-auto sm:min-w-[340px] sm:p-5">
-                <div className="flex items-center gap-3">
+              <div className="absolute right-3 top-3 rounded-2xl border border-[#C8781A]/30 bg-[#06120F]/92 px-3 py-2 shadow-2xl backdrop-blur-xl sm:right-5 sm:top-5 sm:px-3.5 sm:py-2.5">
+                <div className="flex items-center gap-1.5">
+                  <Star size={13} className="fill-[#C8781A] text-[#C8781A]" />
+                  <span
+                    style={{ fontFamily: FR }}
+                    className="text-sm font-black text-white"
+                  >
+                    5.0
+                  </span>
+                </div>
+              </div>
+
+              <div className="absolute bottom-3 left-3 max-w-[82%] rounded-2xl border border-white/10 bg-[#06120F]/88 px-4 py-3.5 shadow-2xl backdrop-blur-xl sm:bottom-5 sm:left-5 sm:max-w-[320px] sm:px-4 sm:py-3.5">
+                <div className="flex items-start gap-3">
                   <div
-                    className="flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl shadow-[0_12px_30px_rgba(200,120,26,0.28)] sm:h-11 sm:w-11"
+                    className="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl shadow-[0_12px_30px_rgba(200,120,26,0.28)]"
                     style={{
                       background:
                         "linear-gradient(135deg, #D18424 0%, #A65E12 100%)",
                     }}
                   >
-                    <Truck size={17} className="text-white" />
+                    <Truck size={16} className="text-white" />
                   </div>
 
                   <div>
                     <p
                       style={{ fontFamily: FR }}
-                      className="text-sm font-bold leading-tight text-white sm:text-base"
+                      className="text-sm font-bold leading-tight text-white"
                     >
                       A loja que vai até você
                     </p>
                     <p
                       style={{ fontFamily: F }}
-                      className="mt-1 text-[11px] leading-relaxed text-white/48 sm:text-xs"
+                      className="mt-1 text-[11px] leading-relaxed text-white/55 sm:text-xs"
                     >
                       Atendimento pelo WhatsApp e entrega combinada.
                     </p>
                   </div>
                 </div>
               </div>
-            </div>
-
-            <div className="absolute right-3 top-3 rounded-2xl border border-[#C8781A]/30 bg-[#06120F]/90 px-3 py-2.5 shadow-2xl backdrop-blur-xl sm:-right-5 sm:top-16 sm:px-4 sm:py-3">
-              <div className="flex items-center gap-1.5 sm:gap-2">
-                <Star size={13} className="fill-[#C8781A] text-[#C8781A]" />
-                <span
-                  style={{ fontFamily: FR }}
-                  className="text-sm font-black text-white"
-                >
-                  5.0
-                </span>
-                <span
-                  style={{ fontFamily: F }}
-                  className="hidden text-xs font-medium text-white/38 sm:inline"
-                >
-                  Google
-                </span>
-              </div>
-              <p
-                style={{ fontFamily: F }}
-                className="mt-0.5 hidden text-center text-[10px] text-white/35 sm:block"
-              >
-                Clientes satisfeitos
-              </p>
             </div>
           </div>
         </div>
